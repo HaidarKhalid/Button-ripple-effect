@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-color: #525252;
+    font-family: sans-serif; 
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: yellow;
+    position: relative;
+    padding: 20px 40px;
+    margin-top: 20%;
+    border: 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, .3);
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    background-color: orangered;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: var(--yPos);
+    left: var(--xPos);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .6s , height .6s;
+}
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-me {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: white;
+    font-size: large;
+
+}
